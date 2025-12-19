@@ -1,14 +1,13 @@
 name: "#30DaysOfAWSTerraform: Project Portfolio"
-description: "Submit your daily GitHub Pages project showcase"
-labels:
-  - submission
-
+description: Submit your daily GitHub Pages project showcase
+title: "Day [DAY] - [YOUR_USERNAME]"
+labels: ["submission"]
 body:
   - type: input
     id: day_number
     attributes:
-      label: "Day Number"
-      description: "Which day of the challenge (1–30)"
+      label: Day Number
+      description: Which day of the challenge (1–30)
       placeholder: "5"
     validations:
       required: true
@@ -16,7 +15,7 @@ body:
   - type: input
     id: challenge_topic
     attributes:
-      label: "Challenge Topic"
+      label: Challenge Topic
       placeholder: "EC2 Instance Creation with Terraform"
     validations:
       required: true
@@ -24,17 +23,39 @@ body:
   - type: input
     id: github_pages_url
     attributes:
-      label: "GitHub Pages Project Showcase URL"
-      description: "Public GitHub Pages URL for today's submission"
-      placeholder: "https://username.github.io/terraform-aws-30days/day-05/"
+      label: GitHub Pages Project Showcase URL
+      description: Public GitHub Pages URL for today's submission
+      placeholder: https://username.github.io/terraform-aws-30days/day-05/
     validations:
       required: true
+
+  - type: input
+    id: github_repo_url
+    attributes:
+      label: Practice Repository (optional)
+      description: Repository containing Terraform code
+      placeholder: https://github.com/username/terraform-aws-30days
+    validations:
+      required: false
 
   - type: textarea
     id: key_learnings
     attributes:
-      label: "Key Learnings"
-      description: "3–5 concise takeaways from today’s work"
+      label: Key Learnings
+      description: 3–5 concise takeaways from today’s work
       placeholder: "Today I learned how to..."
     validations:
       required: true
+
+  - type: checkboxes
+    id: completion_checklist
+    attributes:
+      label: Completion Checklist
+      options:
+        - label: "GitHub Pages site is publicly accessible"
+          required: true
+        - label: "Terraform code is committed to the repository"
+          required: true
+        - label: "Day page content matches the submitted day number"
+          required: true
+
