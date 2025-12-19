@@ -1,4 +1,4 @@
-name:"#30DaysOfAWSTerraform:Project Portfolio"
+name: "#30DaysOfAWSTerraform: Project Portfolio"
 description: "Submit your daily GitHub Pages project showcase"
 labels:
   - submission
@@ -38,4 +38,3 @@ body:
       placeholder: "Today I learned how to..."
     validations:
       required: true
-
